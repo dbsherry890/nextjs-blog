@@ -1,0 +1,11 @@
+.card {
+  margin: 0rem;
+  /* width: 100px; */
+  /* flex: 2 0 20px; */
+  font-weight: 600;
+  gap: 0.5em;
+}
+
+.card:hover {
+  box-shadow: 1 8px 16px 0 rgba(0, 0, 0, 0.7);
+}
