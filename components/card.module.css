@@ -1,9 +1,9 @@
 .card {
-  margin: 0rem;
+  margin: 1rem;
   /* width: 100px; */
   /* flex: 2 0 20px; */
   font-weight: 600;
-  gap: 0.5em;
+  gap: 0.1em;
 }
 
 .card:hover {

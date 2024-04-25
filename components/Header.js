@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { Container, Group, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-// import { MantineLogo } from "@mantinex/mantine-logo";
-import classes from "./HeaderSimple.module.css";
-import Link from "next/link";
+import Logo from "./Logo";
+import classes from "./Header.module.css";
 
 const links = [
   { link: "/", label: "Home" },
-  { link: "/api/hello", label: "Hello" },
-  { link: "/posts/ssg-ssr", label: "Ssg-Ssr" },
-  { link: "/users", label: "Users" },
-  { link: "/another", label: "Another Link" },
+  { link: "/about", label: "About" },
+  { link: "/pricing", label: "Pricing" },
+  { link: "/contact", label: "Contact" },
+  { link: "/book", label: "Book" },
 ];
 
 export function HeaderSimple() {
@@ -18,18 +17,18 @@ export function HeaderSimple() {
   const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
-    <Link
+    <a
       key={link.label}
       href={link.link}
-      component={Link}
       className={classes.link}
       data-active={active === link.link || undefined}
       onClick={(event) => {
+        // event.preventDefault();
         setActive(link.link);
       }}
     >
       {link.label}
-    </Link>
+    </a>
   ));
 
   return (
@@ -38,6 +37,8 @@ export function HeaderSimple() {
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
+        <Logo height={60} />
+
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>

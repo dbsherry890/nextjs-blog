@@ -6,7 +6,7 @@ export default function _Card() {
   return (
     <Card
       shadow="sm"
-      padding="lg"
+      // padding="xl"
       component={Link}
       href="#"
       target="_blank"

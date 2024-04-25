@@ -3,19 +3,20 @@ import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import _Card from "../components/card";
 import { Flex } from "@mantine/core";
+import _Hero from "../components/Hero";
 
-import { getSortedPostsData } from "../lib/posts";
+// import { getSortedPostsData } from "../lib/posts";
 
 import classes from "../styles/Home.module.css";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const allPostsData = getSortedPostsData();
+//   return {
+//     props: {
+//       allPostsData,
+//     },
+//   };
+// }
 
 export default function Home({ allPostsData }) {
   return (
@@ -23,6 +24,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <_Hero />
       <Flex
         direction={{ base: "column", xs: "row" }}
         gap={{ base: "sm", xs: "lg" }}
