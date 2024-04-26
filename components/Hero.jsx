@@ -25,7 +25,7 @@ export default function _Hero() {
             className={cx(classes.control, classes.secondaryControl)}
             size="lg"
           >
-            Learn More
+            Explore
           </Button>
         </div>
       </div>

@@ -1,11 +1,15 @@
 .card {
   margin: 1rem;
-  /* width: 100px; */
+  width: 80%;
   /* flex: 2 0 20px; */
   font-weight: 600;
-  gap: 0.1em;
+  /* gap: 0.1em; */
 }
 
 .card:hover {
-  box-shadow: 1 8px 16px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 7px 7px rgb(244, 222, 222, 0.5);
+}
+
+.img {
+  object-fit: fill;
 }

@@ -17,8 +17,34 @@ import classes from "../styles/Home.module.css";
 //     },
 //   };
 // }
+const products = [
+  {
+    title: "Simple trim",
+    description: "More description",
+    src: "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1663000023.jpg",
+  },
+  {
+    title: "Trim and wash",
+    description: "More description 2",
+    src: "https://wordpress.styleseat.com/wp-content/uploads/2022/08/average-salon-prices-hero-scaled.webp",
+  },
+  {
+    title: "Coloring",
+    description: "Fancy third description",
+    src: "https://img1.wsimg.com/isteam/ip/10ce9f98-419e-47a5-bf54-acfaaf041f34/Why%20Do%20Salons%20Wash%20Your%20Hair%20After%20Coloring.jpeg",
+  },
+];
 
-export default function Home({ allPostsData }) {
+export default function Home() {
+  const items = products.map((product) => (
+    <_Card
+      key={product.title}
+      title={product.title}
+      description={product.description}
+      src={product.src}
+    ></_Card>
+  ));
+
   return (
     <Layout home>
       <Head>
@@ -27,16 +53,11 @@ export default function Home({ allPostsData }) {
       <_Hero />
       <Flex
         direction={{ base: "column", xs: "row" }}
-        gap={{ base: "sm", xs: "lg" }}
+        gap={{ base: "sm" }}
         justify={{ sm: "center" }}
       >
-        <_Card />
-        <_Card />
-        <_Card />
+        {items}
       </Flex>
-      <section className={utilStyles.headingMd}>
-        {/* <p>Here are some blog posts:</p> */}
-      </section>
     </Layout>
   );
 }
