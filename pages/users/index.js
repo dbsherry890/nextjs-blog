@@ -1,5 +1,4 @@
-import { HeaderSimple } from "../../components/HeaderSimple";
-import Link from "next/link";
+// import Link from "next/link";
 
 import styles from "../../styles/Users.module.css";
 
@@ -15,7 +14,6 @@ export const getStaticProps = async () => {
 const Users = ({ users }) => {
   return (
     <div className={styles.header}>
-      <HeaderSimple />
       <h1>Users</h1>
       {users.map((user) => (
         <p key={user.id}>
