@@ -23,8 +23,8 @@ export function HeaderSimple() {
       href={link.link}
       className={classes.link}
       data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
+      onClick={() => {
+        // event.preventDefault();
         setActive(link.link);
       }}
     >
@@ -40,9 +40,9 @@ export function HeaderSimple() {
         <Group gap={10} visibleFrom="sm">
           {items}
         </Group>
-
+        <Link href="/about" key="yuh"></Link>
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <p>860-335-6336</p>
+        {/* <div className={classes.phone}>860-335-6336</div> */}
       </Container>
     </header>
   );
