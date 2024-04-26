@@ -35,13 +35,13 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="xl" className={classes.inner}>
-        <Logo height={60} />
+        <Logo height={60} className={classes.logo} />
 
-        <Group gap={10} visibleFrom="xs">
+        <Group gap={10} visibleFrom="sm">
           {items}
         </Group>
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
         <p>860-335-6336</p>
       </Container>
     </header>

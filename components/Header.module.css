@@ -44,3 +44,13 @@
     color: var(--mantine-color-white);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+}
+
+.logo {
+  display: none;
+}

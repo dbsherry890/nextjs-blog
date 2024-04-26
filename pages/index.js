@@ -1,9 +1,13 @@
 import Head from "next/head";
+// import "@mantine/carousel/styles.css";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import _Card from "../components/card";
 import { Flex } from "@mantine/core";
 import _Hero from "../components/Hero";
+import _Carousel from "../components/Carousel";
+import { Space } from "@mantine/core";
+import { Text } from "@mantine/core";
 
 // import { getSortedPostsData } from "../lib/posts";
 
@@ -17,6 +21,7 @@ import classes from "../styles/Home.module.css";
 //     },
 //   };
 // }
+
 const products = [
   {
     title: "Simple trim",
@@ -58,6 +63,13 @@ export default function Home() {
       >
         {items}
       </Flex>
+      <Space h="xl" />
+      <Text size="xl" fw={700} ta="center" td="underline">
+        Customer Reviews
+      </Text>
+      <Space h="md" />
+
+      <_Carousel />
     </Layout>
   );
 }
