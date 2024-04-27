@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
-import { HeaderSimple } from "./Header";
+import _Header from "./Header";
 // import { Flex } from "@mantine/core";
 import Footer from "./Footer";
 
@@ -27,7 +27,7 @@ export default function Layout({ children, home }) {
       </Head>
 
       <header className={styles.header}>
-        <HeaderSimple />
+        <_Header />
         {/* <Image
           priority
           src="/images/profile.jpg"
