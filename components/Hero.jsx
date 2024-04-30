@@ -1,6 +1,7 @@
 import cx from "clsx";
 import { Title, Text, Container, Button, Overlay } from "@mantine/core";
 import classes from "./Hero.module.css";
+import _Hours from "./Hours";
 
 export default function _Hero() {
   return (
@@ -8,8 +9,10 @@ export default function _Hero() {
       <Overlay color="#000" opacity={0.65} zIndex={1} />
 
       <div className={classes.inner}>
+        {/* <div className={classes.hours}>
+          <_Hours />
+        </div> */}
         <Title className={classes.title}>Insert blurb here</Title>
-
         <Container size={640}>
           <Text size="lg" className={classes.description}>
             Some more information here. Some more information here. Some more
@@ -18,7 +21,13 @@ export default function _Hero() {
         </Container>
 
         <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg">
+          <Button
+            className={classes.control}
+            variant="white"
+            size="lg"
+            component="a"
+            href="/book"
+          >
             Book Now
           </Button>
           <Button

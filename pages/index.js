@@ -56,6 +56,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <_Hero />
+      <Space h="xl" />
       <Flex
         direction={{ base: "column", xs: "row" }}
         gap={{ base: "sm" }}
