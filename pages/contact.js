@@ -1,4 +1,3 @@
-// import Head from "next/head";
 import { Grid } from "@mantine/core";
 import Layout from "../components/layout";
 import React from "react";
@@ -15,7 +14,9 @@ export default function Contact() {
             <Grid.Col span={6} className={styles.hours_column}>
               <Hours />
             </Grid.Col>
-            <Grid.Col span={6}>example@gmail.com</Grid.Col>
+            <Grid.Col span={6}>
+              <div className="mt-4">dbsherry890@gmail.com</div>
+            </Grid.Col>
           </Grid>
         </div>
       </div>

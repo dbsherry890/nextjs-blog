@@ -1,10 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
-import Link from "next/link";
 import _Header from "./Header";
-// import { Flex } from "@mantine/core";
 import Footer from "./Footer";
 
 const name = "Dan Sherry";
@@ -29,8 +25,9 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         <_Header />
       </header>
+      {/* <h1 className="text-2xl font-bold underline">Hello, Next.js!</h1> */}
+
       <main>{children}</main>
-      {!home && <div className={styles.backToHome}></div>}
       <Footer />
     </div>
   );

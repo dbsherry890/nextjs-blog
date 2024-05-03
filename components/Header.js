@@ -1,11 +1,12 @@
 "use client";
-import { useState } from "react";
+// import { useState } from "react";
 import { Container, Group, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Logo from "./Logo";
 import classes from "./Header.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import BurgerMenu from "./BurgerMenu";
 
 const links = [
   { link: "/", label: "Home" },
@@ -33,14 +34,15 @@ export default function _Header() {
   return (
     <header className={classes.header}>
       <Container size="xl" className={classes.inner}>
-        <Logo height={60} className={classes.logo} />
+        <Logo height={50} className={classes.logo} />
 
         <Group gap={10} visibleFrom="sm">
           {items}
         </Group>
-        <Link href="/about" key="yuh"></Link>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        {/* <div className={classes.phone}>860-335-6336</div> */}
+        <div className="visible md:hidden">
+          <BurgerMenu />
+        </div>
+        <div className="hover:underline hidden md:block">(860)-335-6336</div>
       </Container>
     </header>
   );

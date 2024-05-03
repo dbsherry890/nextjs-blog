@@ -1,14 +1,13 @@
 .card {
-  margin: 1rem;
+  margin: 1rem auto;
   width: 80%;
-  /* flex: 2 0 20px; */
   font-weight: 600;
   gap: 0.2rem;
 }
 
 .card:hover {
   box-shadow: 10px 7px 7px rgb(244, 222, 222, 0.5);
-  transform: scale(1.01);
+  transform: scale(1.03);
 }
 
 .img {

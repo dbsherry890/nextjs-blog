@@ -1,7 +1,7 @@
 import Head from "next/head";
 // import "@mantine/carousel/styles.css";
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
+// import utilStyles from "../styles/utils.module.css";
 import _Card from "../components/card";
 import { Flex } from "@mantine/core";
 import _Hero from "../components/Hero";
@@ -11,7 +11,7 @@ import { Text } from "@mantine/core";
 
 // import { getSortedPostsData } from "../lib/posts";
 
-import classes from "../styles/Home.module.css";
+// import classes from "../styles/Home.module.css";
 
 // export async function getStaticProps() {
 //   const allPostsData = getSortedPostsData();

@@ -9,12 +9,6 @@
   /* border: 2px red solid; */
 }
 
-.header2 {
-  border: 2px purple solid;
-  position: relative;
-  left: 10px;
-}
-
 .inner {
   height: rem(28px);
   display: flex;

@@ -1,42 +1,43 @@
 import cx from "clsx";
-import { Title, Text, Container, Button, Overlay } from "@mantine/core";
+import { Title, Text, Container, Button, Overlay, Space } from "@mantine/core";
 import classes from "./Hero.module.css";
 import _Hours from "./Hours";
 
 export default function _Hero() {
   return (
-    <div className={classes.wrapper}>
+    <div className="relative pt-[180] bg-[url('https://res.cloudinary.com/peerspace-inc/image/upload/dmzo2x3qemrmzymuulzz.jpg')] bg-cover h-[50vh] w-full flex">
       <Overlay color="#000" opacity={0.65} zIndex={1} />
 
-      <div className={classes.inner}>
+      <div className="relative z-10 pt-[.5rem] space-y-[1rem] flex flex-col w-screen items-center justify-center ">
         {/* <div className={classes.hours}>
           <_Hours />
         </div> */}
-        <Title className={classes.title}>Insert blurb here</Title>
-        <Container size={640}>
-          <Text size="lg" className={classes.description}>
-            Some more information here. Some more information here. Some more
-            information here. Some more information here.
+        <Container h={120} className="text-white  text-center">
+          <Title className="">Love your look!</Title>
+          <Text size="lg" className="">
+            Providing the haircut you deserve. <br />
+            Some more information here.
           </Text>
-        </Container>
+          <Space h="xl" />
 
-        <div className={classes.controls}>
-          <Button
-            className={classes.control}
-            variant="white"
-            size="lg"
-            component="a"
-            href="/book"
-          >
-            Book Now
-          </Button>
-          <Button
-            className={cx(classes.control, classes.secondaryControl)}
-            size="lg"
-          >
-            Explore
-          </Button>
-        </div>
+          <div>
+            <Button
+              className={classes.control}
+              variant="white"
+              size="lg"
+              component="a"
+              href="/book"
+            >
+              Book Now
+            </Button>
+            <Button
+              className={cx(classes.control, classes.secondaryControl)}
+              size="lg"
+            >
+              Gallery
+            </Button>
+          </div>
+        </Container>
       </div>
     </div>
   );
