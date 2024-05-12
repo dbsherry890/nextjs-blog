@@ -1,33 +1,27 @@
 import { Anchor, Group, ActionIcon, rem } from "@mantine/core";
 import { BrandTwitter, BrandYoutube, BrandInstagram } from "tabler-icons-react";
 import Logo from "./Logo";
-import classes from "./FooterCentered.module.css";
+import classes from "./Footer.module.css";
+import Link from "next/link";
 
 const links = [
-  { link: "#", label: "Contact" },
+  { link: "/about", label: "About" },
+  { link: "/contact", label: "Contact" },
   { link: "#", label: "Privacy" },
-  { link: "#", label: "Blog" },
   { link: "#", label: "Store" },
 ];
 
-export default function FooterCentered() {
+export default function Footer() {
   const items = links.map((link) => (
-    <Anchor
-      c="dimmed"
-      key={link.label}
-      href={link.link}
-      lh={1}
-      onClick={(event) => event.preventDefault()}
-      size="sm"
-    >
+    <Link key={link.label} href={link.link} size="sm">
       {link.label}
-    </Anchor>
+    </Link>
   ));
 
   return (
     <div className={classes.footer}>
       <div className={classes.inner}>
-        <Logo height={120} />
+        <Logo height={80} />
 
         <Group className={classes.links}>{items}</Group>
 

@@ -7,11 +7,14 @@ export default function _BookForm() {
       name: "",
       phonenumber: "",
       email: "",
+      details: "",
       termsOfService: false,
     },
 
     validate: {
       email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+      name: (value) =>
+        value.length < 2 ? "First name must have at least 2 letters" : null,
     },
   });
 
@@ -22,6 +25,7 @@ export default function _BookForm() {
           required
           label="Name"
           placeholder="Jane Doe"
+          // key={form.key("name")}
           {...form.getInputProps("name")}
         />
         <Space h="md" />
@@ -30,6 +34,7 @@ export default function _BookForm() {
           leftSection="📱"
           label="Number"
           placeholder="xxx-xxx-xxxx"
+          // key={form.key("phonenumber")}
           {...form.getInputProps("phonenumber")}
         />
         <Space h="md" />
@@ -37,7 +42,15 @@ export default function _BookForm() {
           required
           label="Email"
           placeholder="your@email.com"
+          // key={form.key("email")}
           {...form.getInputProps("email")}
+        />
+        <Space h="md" />
+        <TextInput
+          label="Details"
+          placeholder="Don't go too short! I will be angry!"
+          // key={form.key("details")}
+          {...form.getInputProps("details")}
         />
         <Space h="md" />
 
